@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/idCard/idCard",
+    "pages/idCard_check/idCard_check",
+    "pages/test/test",
+    "pages/camera/index",
+    "pages/test/test",
+    "pages/details/details",
+    "pages/more/more",
+    "pages/costomize/costomize"
+  ],
+  "window": {
+    "defaultTitle": "专业照片电子回执制作"
+  },
+  "tabBar": {
+    "textColor": "#333333",
+    "selectedColor": "#009D9A",
+    "backgroundColor": "#f2f2f2",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "name": "照片"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
+        "name": "订单"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*n1f8SYBo_RkAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*q2eOQpQEzDsAAAAAAAAAAABkARQnAQ",
+        "name": "我的"
+      }
+    ]
+  }
+}

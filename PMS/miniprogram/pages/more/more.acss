@@ -1,0 +1,105 @@
+.page {
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+.search-outer {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cartoon {
+  width: 25px;
+  height: 25px;
+}
+
+.search-input {
+  flex: 1;
+  margin-left: 12px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+  background-color: #ffffff;
+  padding: 12px 0;
+  border-radius: 12px;
+}
+
+.tab-item {
+  padding: 8px 16px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tab-item.active {
+  color: #1890ff;
+  border-bottom: 2px solid #1890ff;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column; /* 设置为一列布局 */
+  margin-top: 16px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: space-between; /* 项目之间的空间 */
+  width: 100%; /* 设置宽度为100% */
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px; /* 添加底部间距 */
+  position: relative; /* 相对定位，以便绝对定位图标 */
+}
+.item-info {
+  display: flex;
+  flex-direction: column; /* 信息上下排列 */
+}
+
+.grid-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.certified-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.certified-badge image {
+  width: 20px;
+  height: 20px;
+}
+
+.certified-text {
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.grid-item-size {
+  font-size: 14px;
+  color: #999999;
+}
+
+.icon {
+  position: absolute; /* 绝对定位 */
+  right: 30px; /* 距离右侧30px */
+  width: 20px; /* 图标宽度 */
+  height: 20px; /* 图标高度 */
+}

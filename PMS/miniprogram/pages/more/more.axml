@@ -1,0 +1,33 @@
+<view class="page">
+  <view class="search-outer">
+    <image class="cartoon" mode="scaleToFill" src="/image/cartoon.png" />
+    <input
+      class="search-input"
+      placeholder="搜索"
+      value="{{search}}"
+      onConfirm="doneSearch"
+      onInput="handleSearch"
+    />
+  </view>
+  <view class="tab-container">
+    <view class="tab-item {{activeTab === 'all' ? 'active' : ''}}" data-tab="all" onTap="changeTab">全部</view>
+    <view class="tab-item {{activeTab === 'common' ? 'active' : ''}}" data-tab="common" onTap="changeTab">常规</view>
+    <view class="tab-item {{activeTab === 'life' ? 'active' : ''}}" data-tab="life" onTap="changeTab">生活</view>
+    <view class="tab-item {{activeTab === 'work' ? 'active' : ''}}" data-tab="work" onTap="changeTab">工作</view>
+  </view>
+  <view class="grid-container">
+    <block a:for="{{filteredOptions}}" a:key="index">
+      <view class="grid-item" data-type="{{item.type}}" data-mm="{{item.mm}}" onTap="handleTap">
+        <view class="item-info"> <!-- 新增一个容器用于信息上下排列 -->
+          <text class="grid-item-title">{{item.type}}</text>
+          <view a:if="{{item.type.includes('回执')}}" class="certified-badge">
+            <image mode="scaleToFill" src="/image/VIP.png" />
+            <text class="certified-text">官方认证</text>
+          </view>
+          <text class="grid-item-size">{{item.mm}}</text>
+        </view>
+        <image class="icon" src="/image/direction.png" /> <!-- 添加图标 -->
+      </view>
+    </block>
+  </view>
+</view>

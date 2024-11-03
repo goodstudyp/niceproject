@@ -1,0 +1,14 @@
+.canvas-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 33vh; 
+  width: 100%;  
+
+}
+
+.canvas {
+  margin-top: 65px;
+  width: 48mm;
+  height: 56mm;
+}

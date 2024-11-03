@@ -1,0 +1,54 @@
+.block {
+  position: relative; 
+  width: 100%;        
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-image {
+  position: absolute;  
+  top: 46%;           
+  left: 64%;          
+ 
+  width: 100px;        
+  height: 100px;      
+}
+.button{
+ margin-top: 30px;
+  width: 40%;
+  height: 50px;
+  margin-left:30px ;
+  border-radius: 12px;
+}
+.box{
+  display: flex;
+  margin-right: 28px;
+  justify-content: center;
+  padding-bottom: 20px; 
+}
+.detail{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container-comtent-dec-item{
+	height: 50px;
+	display: flex;
+    justify-content: space-between;
+}
+.color-selection {
+  margin-top: 20px;
+}
+
+.color-box {
+  width: 40px; /* 盒子的宽度 */
+  height: 40px; /* 盒子的高度 */
+  border-radius: 5px; /* 圆角 */
+  margin: 0 5px; /* 间距 */
+  cursor: pointer; /* 鼠标指针 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+}
+

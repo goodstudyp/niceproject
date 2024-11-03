@@ -1,0 +1,34 @@
+
+
+  <image mode="scaleToFill" src="/image/photo_person.png" class="image" />  
+
+<view class="container">
+ 
+  <view class="radio-group">
+    <radio-group onChange="radioChange">
+      <label class="radio-label">
+        <radio value="pixel" checked="{{SizeType === 'pixel'}}" /> 像素尺寸px
+      </label>
+      <label class="radio-label">
+        <radio value="print" checked="{{SizeType === 'print'}}" /> 冲印尺寸mm
+      </label>
+    </radio-group>
+  </view>
+  <view class="input-group">
+    <input
+      class="input"
+      type="number"
+      placeholder="宽度"
+      value="{{width}}"
+      onInput="handleWidthInput"
+    />
+    <input
+      class="input"
+      type="number"
+      placeholder="高度"
+      value="{{height}}"
+      onInput="handleHeightInput"
+    />
+  </view>
+  <view class="button" onTap="submitSize">确定</view>
+</view>

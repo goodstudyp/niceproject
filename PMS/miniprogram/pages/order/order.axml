@@ -1,0 +1,22 @@
+<view class="container">
+  <view data-index="{{index}}" class="container-content-item" a:for="{{userFile}}" a:key="index" onTap="jump">
+    <view class="word">
+      <view class="title">照片类型: {{item.type}}</view>
+      <view class="description">上传时间: {{item.uploadTime}}</view>
+      <view class="description">订单号: {{item.order_number}}</view>
+      <view class="status {{
+        item.status === '回执认证中' ? 'pending' : 
+        item.status === '不合格' ? 'failed' : 
+        'completed'
+      }}">
+        状态: {{item.status}}
+      </view>
+    </view>
+    <image class="page" src="{{item.fileContent}}" mode="scaleToFill"></image>
+  </view>
+</view>
+
+
+
+
+

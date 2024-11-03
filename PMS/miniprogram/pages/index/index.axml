@@ -1,0 +1,249 @@
+<view class="page" >
+  <block
+    a:for="{{typeList}}"
+    a:for-index="index"
+    a:for-item="item"
+  >
+    <!-- <ant-notice
+      type="{{item}}"
+      style="margin-bottom: 8px"
+      enableMarquee="{{true}}"
+      loop="{{true}}"
+      onTap="handleTapLink"
+    >
+      {{message}}
+    </ant-notice> -->
+  </block>
+  <view class="search-outer" onTap="goToMore" >
+    <image class="cartoon" mode="scaleToFill" src="/image/cartoon.png" style="width: 25px; height: 25px;" />
+  
+    <input
+      class="search-input"
+      placeholder="搜索"
+      value="{{search}}"
+      onConfirm="doneSearch"
+      onInput="handleSearch"
+     style="width:80%"
+     
+    />
+    
+  </view>
+  
+  
+<image mode="scaleToFill" src="/image/photo4.png" class="picture"/>
+
+
+
+<button class="button" type="primary" onTap="jump_more" >
+  <image mode="scaleToFill" src="/image/take_photo.png" class="button-icon" />
+
+  创建证件照
+</button>
+
+
+ 
+    
+  
+
+ <ant-list class="custom-ant-list">
+  
+  <ant-list-item
+  class="ant-list-item-with-border"
+  brief="295x413px"
+  extra="电子照片"
+  onTap="handleTap"
+  data-info="idCard"
+  arrow="right"
+  data-brief="295x413"
+  data-color="white"
+  data-money="6.6"
+  data-type="一寸照"
+  data-sizedemo="25mm x 35mm"
+>
+ 一寸照
+  <ant-icon
+    slot="image"
+    type="TeamFill"
+    style="font-size: 64px; color: burlywood"
+  ></ant-icon>
+  <view class="box">
+  
+    
+    
+  </view>
+  
+
+</ant-list-item>
+  <ant-list-item
+  class="ant-list-item-with-border"
+  brief="358x441px"
+  extra="电子回执"
+  onTap="handleTap"
+  data-info="idCard"
+  arrow="right"
+  data-brief="358x441"
+  data-color="white"
+  data-money="15"
+  data-type="身份证回执"
+  data-sizedemo="32mm x 26mm"
+>
+ 身份证回执
+  <ant-icon
+    slot="image"
+    type="TeamFill"
+    style="font-size: 64px; color: burlywood"
+  ></ant-icon>
+  <view class="box">
+  
+    <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+    <view style="color: gold;">官方认证</view>
+    
+  </view>
+  
+
+</ant-list-item>
+
+  <ant-list-item
+    class="ant-list-item-with-border"
+    brief="358x441px"
+    extra="电子回执"
+   
+    onTap="handleTap"
+    data-info="residencePermit"
+    arrow="right"
+    data-brief="358x441"
+    data-color="white"
+    data-money="15"
+    data-type="居住证回执"
+    data-sizedemo="26mm x 32mm"
+  >
+    居住证回执
+    <ant-icon
+      slot="image"
+      type="TeamFill"
+      style="font-size: 64px; color: burlywood"
+    ></ant-icon>
+    <view class="box">
+  
+      <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+      <view style="color: gold;">官方认证</view>
+      
+    </view>
+  </ant-list-item>
+
+  <ant-list-item
+    class="ant-list-item-with-border"
+    brief="260x378px"
+    extra="电子回执"
+   
+    onTap="handleTap"
+    data-info="driverLicense"
+    arrow="right"
+    data-brief="260x378"
+    data-color="white"
+    data-money="15"
+    data-type="驾驶证回执"
+    data-sizedemo="22mm x 32mm"
+  >
+    驾驶证回执
+    <ant-icon
+      slot="image"
+      type="TeamFill"
+      style="font-size: 64px; color: burlywood"
+    ></ant-icon>
+    <view class="box">
+  
+      <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+      <view style="color: gold;">官方认证</view>
+      
+    </view>
+  </ant-list-item>
+
+  <ant-list-item
+    class="ant-list-item-with-border"
+    brief="354x472px"
+    extra="电子回执"
+   
+    onTap="handleTap"
+    data-info="passport"
+    arrow="right"
+    data-brief="354x472"
+    data-color="white"
+    data-money="15"
+    data-type="港澳通行证回执"
+    data-sizedemo="33mm x 48mm"
+  >
+    港澳通行证
+    <ant-icon
+      slot="image"
+      type="TeamFill"
+      style="font-size: 64px; color: burlywood"
+    ></ant-icon>
+    <view class="box">
+  
+      <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+      <view style="color: gold;">官方认证回执</view>
+      
+    </view>
+  </ant-list-item>
+
+  
+  <ant-list-item
+    class="ant-list-item-with-border"
+    brief="354x472px"
+    extra="电子回执"
+   
+    onTap="handleTap"
+    data-info="passport"
+    arrow="right"
+    data-brief="354x472"
+    data-color="white"
+    data-money="15"
+    data-type="护照回执"
+    data-sizedemo="33mm x 48mm"
+  >
+    护照回执
+    <ant-icon
+      slot="image"
+      type="TeamFill"
+      style="font-size: 64px; color: burlywood"
+    ></ant-icon>
+    <view class="box">
+  
+      <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+      <view style="color: gold;">官方认证</view>
+      
+    </view>
+  </ant-list-item>
+
+  <ant-list-item
+    class="ant-list-item-with-border"
+    brief="358x441px"
+    extra="电子回执"
+   
+    onTap="handleTap"
+    data-info="socialSecurityCard"
+    arrow="right"
+    data-brief="358x441"
+    data-color="white"
+    data-money="15"
+    data-type="社会保障卡"
+    data-sizedemo="32mm x 26mm"
+  >
+    社会保障卡回执
+    <ant-icon
+      slot="image"
+      type="TeamFill"
+      style="font-size: 64px; color: burlywood"
+    ></ant-icon>
+    <view class="box">
+  
+      <image mode="scaleToFill" src="/image/VIP.png" style="width:25px;height:25px" />
+      <view style="color: gold;">官方认证</view>
+      
+    </view>
+  </ant-list-item>
+
+  
+</ant-list>
+</view>

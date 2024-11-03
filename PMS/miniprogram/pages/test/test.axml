@@ -1,0 +1,9 @@
+<!-- <view
+  data-index="0"
+  bindtap="goNextPage"
+  class="container-content-item">
+  <view class="title">A4尺寸</view>
+  <view class="description">210x297 px  |  29.7x21 cm</view>
+  <image src="/image/retake.png"></image>
+
+</view> -->

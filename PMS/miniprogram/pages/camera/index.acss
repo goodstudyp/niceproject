@@ -1,0 +1,60 @@
+.fullscreen-image {
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.medium-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.take-photo-center {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.swap-camera-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.retake-photo-top-left {
+  position: absolute;
+  top: 580px; 
+  left: 35px; 
+  z-index: 100;
+  margin-right: 10px; 
+}
+
+.confirm-photo-top-right {
+  position: absolute;
+  top: 580px; 
+  right: 35px;
+  z-index: 100;
+  margin-left: 10px; 
+}
+.fullscreen-imagedemo {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 38px;
+  z-index: 1;
+}
+.photo{
+  z-index: 5;
+  position: absolute;
+  height: 78vh;
+  width: 100%;
+  object-fit: cover;
+  
+}
+

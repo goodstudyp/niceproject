@@ -1,0 +1,7 @@
+{
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "ant-button": "antd-mini/es/Button/index",
+    "ant-container": "antd-mini/es/Container/index"
+  }
+}

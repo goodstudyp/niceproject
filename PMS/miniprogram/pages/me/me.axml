@@ -1,0 +1,38 @@
+<view class="container" style="background-color: white;">
+  <button class="button" type="primary" onTap="jump_more" >
+    <image mode="scaleToFill" src="/image/take_photo.png" class="button-icon" />
+  
+    创建证件照
+  </button>
+  <view class="bottom-section">
+    <view class="option" onTap="onJumpToOrders">
+      <image class="option-icon" src="/image/order.png"></image>
+      <text class="option-text">我的订单</text>
+      <image class="option-arrow" src="/image/direction.png"></image>
+    </view>
+    <view class="option" onTap="onJumpToCustomerService">
+      <image class="option-icon" src="/image/kefu.png"></image>
+      <text class="option-text">客服中心</text>
+      <image class="option-arrow" src="/image/direction.png"></image>
+    </view>
+    <view class="option" onTap="onJumpToNotes">
+      <image class="option-icon" src="/image/attention.png"></image>
+      <text class="option-text">注意事项</text>
+      <image class="option-arrow" src="/image/direction.png"></image>
+    </view>
+    <view class="option" onTap="onJumpToStrategy">
+      <image class="option-icon" src="/image/gonglue.png"></image>
+      <text class="option-text">拍摄攻略</text>
+      <image class="option-arrow" src="/image/direction.png"></image>
+    </view>
+    <view class="option" onTap="onShareToFriends">
+      <image class="option-icon" src="/image/share.png"></image>
+      <text class="option-text">分享给朋友</text>
+      <image class="option-arrow" src="/image/direction.png"></image>
+    </view>
+  </view>
+
+  <view>
+    <image mode="scaleToFill" src="/image/photome.png" />
+  </view>
+</view>

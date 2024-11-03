@@ -1,0 +1,10 @@
+<view>
+  <view>
+    <image mode="scaleToFill" src="{{downloadedPhotoPath}}" />
+    <image mode="scaleToFill" src="{{photo2Path}}" />
+  </view>
+  <view>
+    <text>状态: {{photo2Status}}</text>
+    <button a:if="{{photo2Status === '不合格'}}" ontap="retakePhoto">重新拍照</button>
+  </view>
+</view>

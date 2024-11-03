@@ -1,0 +1,54 @@
+<view style="background-color: white; min-height: 100vh;">
+  <view a:if="{{showReceiptBlock}}">
+    <view class="block">
+      <cover-image class="cover-image" style="width:100%; height:auto;" src="{{image_url}}" />
+      <view class="picture_sample">
+        <image mode="scaleToFill" src="/image/sample.png" class="overlay-image" />
+      </view>
+    </view>
+  </view>
+
+  <view a:if="{{showCarousel}}">
+    <!-- 轮播图的代码 -->
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <block a:for="{{carouselImages}}" a:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="carousel-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="detail" style="margin-left:15px;margin-right:15px">
+    <view class="type" style="color: black; font-weight: 500; font-size:20px;">
+      {{type}}
+    </view>
+    <view class="container-comtent-dec-item" style="margin-top:20px">
+      <view style="width:40%">像素尺寸：</view>
+      <view>{{size_w}}x{{size_h}} px</view>
+    </view>
+    <view class="container-comtent-dec-item">
+      <view style="width:40%">冲印尺寸：</view>
+      <view>{{sizedemo}}</view>
+    </view>
+  </view>
+
+  <!-- 修改这里的逻辑 -->
+  <view a:if="{{!showReceiptBlock}}" class="color-selection" style="display: flex; justify-content: space-around; margin-top: 20px; position: relative;">
+    <view class="color-box" style="background-color: red;" data-color="red" onTap="selectColor"></view>
+    <view class="color-box" style="background-color: blue;" data-color="blue" onTap="selectColor"></view>
+    <view class="color-box" style="background-color: white;" data-color="white" onTap="selectColor"></view>
+    <view class="color-box" style="background-color: pink;" data-color="pink" onTap="selectColor"></view>
+    <view class="color-box" style="background-color: gray;" data-color="gray" onTap="selectColor"></view>
+    
+    <!-- 选中颜色的显示框 -->
+    <view class="selected-color-display" style="margin-top: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; background-color: {{selectedColor}};">
+      选中的颜色
+    </view>
+  </view>
+
+  <view class="box">
+    <button onTap="image" type="primary" data-info="camera" class="button">现在拍摄</button>
+    <button onTap="image" type="ghost" data-info="upload" class="button">相册上传</button>
+  </view>
+</view>

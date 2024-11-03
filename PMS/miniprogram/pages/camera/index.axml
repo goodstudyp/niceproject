@@ -1,0 +1,43 @@
+
+  <camera
+  a:if="{{!photoPath}}"
+  id="camera"
+  frame-size='large'
+  device-position="{{position}}"
+  flash="off"
+  style='width: 100%; height: 78vh; position: relative; z-index: 0;'
+  
+></camera>
+
+<view a:else>
+  <image class='photo' src="{{photoPath}}"></image>
+
+  <image
+    class='control-item-img medium-icon retake-photo-top-left'
+    src='/image/retake.png'
+    onTap="retakePhoto"
+  ></image>
+  <image
+    class='control-item-img medium-icon confirm-photo-top-right'
+    src='/image/sure.png'
+    onTap="uploadphoto"
+  ></image>
+</view>
+
+
+
+<view a:if="{{!photoPath}}">
+  <image class='fullscreen-imagedemo' src='/image/person.png'></image>
+
+  <image
+    class="control-item-img medium-icon swap-camera-top-right"
+    src="/image/swapcamera.png"
+    onTap="swap_position"
+  ></image>
+
+  <image
+    class="control-item-img medium-icon take-photo-center"
+    src="/image/take_photo.png"
+    onTap="takePhoto"
+  ></image>
+</view>

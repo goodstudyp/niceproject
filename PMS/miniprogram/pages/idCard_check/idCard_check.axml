@@ -1,0 +1,10 @@
+<view class="canvas-container">
+  <canvas class="canvas" id="canvas" type="2d" onReady="onCanvasReady" ></canvas>
+</view>
+
+
+
+<view class="page-section-demo">
+  <button onTap="back" type="primary">重新拍</button>
+  <button onTap="next" type="primary">下一步</button>
+</view>

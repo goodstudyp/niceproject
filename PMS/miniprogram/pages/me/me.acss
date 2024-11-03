@@ -1,0 +1,76 @@
+.container {
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-section {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.jump-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #1890ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.jump-button:hover {
+  background-color: #007bff; /* 悬停效果 */
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 左右对齐 */
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 12px; /* 选项之间的间距 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s; /* 背景颜色过渡效果 */
+}
+
+.option:hover {
+  background-color: #f0f0f0; /* 悬停效果 */
+}
+
+.option-icon, .option-arrow {
+  width: 24px; /* 图标宽度 */
+  height: 24px; /* 图标高度 */
+}
+
+.option-text {
+  flex: 1; /* 让文本占满剩余空间 */
+  font-size: 16px;
+  color: #333333;
+  margin: 0 12px; /* 文本与图标的间距 */
+}
+.button{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 12px;
+  width: 92%;
+  height:60px ;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+
+
+}
+.button-icon {
+  width: 20px; /* 图标宽度 */
+  height: 20px; /* 图标高度 */
+  margin-right: 10px; /* 图标和文字之间的距离 */
+}
