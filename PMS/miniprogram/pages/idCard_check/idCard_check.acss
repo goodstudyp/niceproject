@@ -153,3 +153,37 @@
   transform: scale(0.98);
   transition: transform 0.2s;
 }
+
+.photo-frame {
+  position: relative;
+  width: 400rpx;
+  height: 500rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.photo-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+
+.watermark-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  pointer-events: none; /* 使水印层不影响下层的交互 */
+}
+
+.watermark-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 25rpx;
+  font-weight: bold;
+  padding: 20rpx;
+  white-space: nowrap;
+}

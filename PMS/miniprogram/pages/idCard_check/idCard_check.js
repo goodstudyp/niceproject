@@ -58,11 +58,9 @@ Page({
       }
 
       image.onload = () => {
-        this.adaptcanvas(image.width, image.height); // 重新调整照片的尺寸适应画布
+        this.adaptcanvas(image.width, image.height);
         console.log("图像的尺寸", image.width, image.height);
-       
         ctx.drawImage(image, this.imageX, this.imageY, this.newimageWidth, this.newimageHeight);
-        this.drawTextWatermark(ctx); 
       };
 
       image.onerror = (err) => {
@@ -81,31 +79,22 @@ Page({
       return;
     }
   
-    const ctx = this.canvas.getContext('2d');
-    
-   
-    this.redrawWithoutWatermark(ctx, () => {
-      my.canvasToTempFilePath({
-        canvas: this.canvas,
-        fileType: 'jpg',
-        quality: 0.9,
-        success(res) {
-          console.log('保存成功', res.tempFilePath);
-         getApp().globalData.photo2 = res.tempFilePath
-
-          console.log("请看我"+getApp().globalData.photo2)
-
-          
-          
-        
-        },
-        fail(err) {
-          console.error('保存失败', err);
-        }
-      });
+    // 直接保存画布内容，因为水印是在上层显示的，不会影响到画布本身
+    my.canvasToTempFilePath({
+      canvas: this.canvas,
+      fileType: 'jpg',
+      quality: 0.9,
+      success(res) {
+        console.log('保存成功', res.tempFilePath);
+        getApp().globalData.photo2 = res.tempFilePath;
+        console.log("请看我"+getApp().globalData.photo2);
+      },
+      fail(err) {
+        console.error('保存失败', err);
+      }
     });
 
-    this.writeFileFromBase64();//用来将photo1转为一个路径以保存图片到服务器
+    this.writeFileFromBase64(); //用来将photo1转为一个路径以保存图片到服务器
    
   },
   

@@ -1,16 +1,21 @@
 <view class="container">
   <view class="header">
     <text class="title">照片预览</text>
-    
   </view>
 
   <view class="preview-section">
     <view class="photo-container">
       <text class="photo-label">预览效果</text>
-      <canvas id="canvas" type="2d" onReady="onCanvasReady" class="photo-canvas"></canvas>
-      <view class="watermark-hint">
-        <image class="hint-icon" src="/image/info.png" />
-        <text>预览中的水印不会出现在最终照片中</text>
+      <!-- 照片层 -->
+      <view class="photo-frame">
+        <canvas id="canvas" type="2d" onReady="onCanvasReady" class="photo-canvas"></canvas>
+        <!-- 水印层 -->
+        <view class="watermark-layer">
+          <text class="watermark-text">电子相片制作</text>
+          <text class="watermark-text">电子相片制作</text>
+          <text class="watermark-text">电子相片制作</text>
+          <text class="watermark-text">电子相片制作</text>
+        </view>
       </view>
     </view>
   </view>
