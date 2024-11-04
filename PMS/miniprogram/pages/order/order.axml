@@ -1,18 +1,51 @@
-<view class="container">
-  <view data-index="{{index}}" class="container-content-item" a:for="{{userFile}}" a:key="index" onTap="jump">
-    <view class="word">
-      <view class="title">照片类型: {{item.type}}</view>
-      <view class="description">上传时间: {{item.uploadTime}}</view>
-      <view class="description">订单号: {{item.order_number}}</view>
-      <view class="status {{
-        item.status === '回执认证中' ? 'pending' : 
-        item.status === '不合格' ? 'failed' : 
-        'completed'
-      }}">
-        状态: {{item.status}}
+<view class="page">
+  <view class="header">
+    <text class="header-title">订单列表</text>
+  </view>
+
+  <view class="order-list">
+    <view data-index="{{index}}" 
+          class="order-item" 
+          a:for="{{userFile}}" 
+          a:key="index" 
+          onTap="jump">
+      <view class="order-content">
+        <view class="order-info">
+          <view class="order-type">
+            <text class="type-label">{{item.type}}</text>
+            <view class="status-badge {{
+              item.status === '回执认证中' ? 'pending' : 
+              item.status === '不合格' ? 'failed' : 
+              'completed'
+            }}">
+              {{item.status}}
+            </view>
+          </view>
+          
+          <view class="order-details">
+            <view class="detail-item">
+              <image class="icon" src="/image/time.png" />
+              <text>{{item.uploadTime}}</text>
+            </view>
+            <view class="detail-item">
+              <image class="icon" src="/image/order.png" />
+              <text>订单号: {{item.order_number}}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="photo-preview">
+          <image class="preview-image" src="{{item.fileContent}}" mode="aspectFill"/>
+          <image class="arrow-icon" src="/image/direction.png" />
+        </view>
       </view>
     </view>
-    <image class="page" src="{{item.fileContent}}" mode="scaleToFill"></image>
+  </view>
+
+  <!-- 无订单时显示 -->
+  <view class="empty-state" a:if="{{!listShow}}">
+    <image class="empty-icon" src="/image/empty.png" />
+    <text class="empty-text">暂无订单</text>
   </view>
 </view>
 

@@ -67,11 +67,11 @@ handleSetRadius(checked) {
           radius: checked,
       });
   },
-  // jump_more(e){
-  //   my.navigateTo({
-  //       url:'/pages/more/more'
-  //   })
-  // },
+  jump_more(e){
+    my.navigateTo({
+        url:'/pages/details/details'
+    })
+  },
   goToMore: function() {
     my.navigateTo({
       url: '/pages/more/more'

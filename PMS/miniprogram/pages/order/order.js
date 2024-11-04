@@ -123,8 +123,10 @@ Page({
     const index = e.currentTarget.dataset.index;
     const file = this.data.userFile[index];
     
+    console.log("跳转时的状态:", file.status);
+
     my.navigateTo({
-      url: `/pages/details/details?photo2Path=${encodeURIComponent(file.fileContent)}&fileID=${encodeURIComponent(file.photo2FileId)}`
+      url: `/pages/details/details?photo2Path=${encodeURIComponent(file.fileContent)}&fileID=${encodeURIComponent(file.photo2FileId)}&status=${encodeURIComponent(file.status)}&type=${encodeURIComponent(file.type)}`
     });
   }
 });

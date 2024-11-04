@@ -1,10 +1,47 @@
-<view>
-  <view>
-    <image mode="scaleToFill" src="{{downloadedPhotoPath}}" />
-    <image mode="scaleToFill" src="{{photo2Path}}" />
+<view class="container">
+  <view class="header">
+    <view class="title">订单详情</view>
+    <view class="status-badge {{
+      status === '回执认证中' ? 'pending' : 
+      status === '不合格' ? 'failed' : 
+      'completed'
+    }}">
+      {{status}}
+    </view>
   </view>
-  <view>
-    <text>状态: {{photo2Status}}</text>
-    <button a:if="{{photo2Status === '不合格'}}" ontap="retakePhoto">重新拍照</button>
+
+  <view class="photo-section">
+    <view class="photo-container">
+      <view class="photo-item">
+        <text class="photo-label">拍摄照片</text>
+        <image src="/image/ppppp.png" mode="aspectFit" class="photo"/>
+      </view>
+      <view class="photo-item">
+        <text class="photo-label">拿到回执</text>
+        <image src="/image/xomm.png" mode="aspectFit" class="photo"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="info-section">
+    <view class="info-item">
+      <text class="info-label">照片类型</text>
+      <text class="info-value">{{type}}</text>
+    </view>
+  </view>
+
+  <view class="button-section">
+    <button class="primary-btn" onTap="handleDownload">
+      <image class="btn-icon" src="/image/download.png" />
+      下载回执
+    </button>
+    
+    <button 
+      a:if="{{status === '不合格'}}"
+      class="secondary-btn" 
+      onTap="handleRetake">
+      <image class="btn-icon" src="/image/camera.png" />
+      重新拍摄
+    </button>
   </view>
 </view>
