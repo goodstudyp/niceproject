@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-  "styleIsolation": "apply-shared"
+  "styleIsolation": "apply-shared",
+  "pullRefresh": true,
+  "defaultTitle": "订单列表"
 }

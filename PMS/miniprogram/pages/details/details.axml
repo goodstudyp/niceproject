@@ -10,38 +10,74 @@
     </view>
   </view>
 
-  <view class="photo-section">
-    <view class="photo-container">
-      <view class="photo-item">
-        <text class="photo-label">拍摄照片</text>
-        <image src="/image/ppppp.png" mode="aspectFit" class="photo"/>
-      </view>
-      <view class="photo-item">
-        <text class="photo-label">拿到回执</text>
-        <image src="/image/xomm.png" mode="aspectFit" class="photo"/>
+  <!-- 带回执的照片布局 -->
+  <block a:if="{{type.includes('回执')}}">
+    <view class="photo-section">
+      <view class="photo-container">
+        <view class="photo-item">
+          <text class="photo-label">原始照片</text>
+          <image src="/image/ppppp.png" mode="aspectFit" class="photo"/>
+        </view>
+        <view class="photo-item">
+          <text class="photo-label">处理后照片</text>
+          <image src="/image/xomm.png" mode="aspectFit" class="photo"/>
+        </view>
       </view>
     </view>
-  </view>
+
+    <view class="button-section">
+      <button class="primary-btn" onTap="handleDownload">
+        <image class="btn-icon" src="/image/download.png" />
+        下载回执
+      </button>
+      
+      <button 
+        a:if="{{status === '不合格'}}"
+        class="secondary-btn" 
+        onTap="handleRetake">
+        <image class="btn-icon" src="/image/camera.png" />
+        重新拍摄
+      </button>
+    </view>
+  </block>
+
+  <!-- 不带回执的照片布局 -->
+  <block a:else>
+    <view class="photo-section">
+      <view class="single-photo-container">
+        <text class="photo-label">处理后照片</text>
+        <image src="{{photo2Path}}" mode="aspectFit" class="photo-large"/>
+      </view>
+    </view>
+
+    <view class="button-section">
+      <!-- 未确认时显示确认按钮 -->
+      <button a:if="{{!isConfirmed}}" class="primary-btn" onTap="handleConfirm">
+        <image class="btn-icon" src="/image/confirm.png" />
+        确认照片
+      </button>
+      
+      <!-- 已确认时显示下载按钮 -->
+      <button a:if="{{isConfirmed}}" class="primary-btn" onTap="handlePhotoDownload">
+        <image class="btn-icon" src="/image/download.png" />
+        下载照片
+      </button>
+      
+      <!-- 未确认时显示重拍按钮 -->
+      <button 
+        a:if="{{!isConfirmed}}"
+        class="secondary-btn" 
+        onTap="handleRetake">
+        <image class="btn-icon" src="/image/camera.png" />
+        重新拍摄
+      </button>
+    </view>
+  </block>
 
   <view class="info-section">
     <view class="info-item">
       <text class="info-label">照片类型</text>
       <text class="info-value">{{type}}</text>
     </view>
-  </view>
-
-  <view class="button-section">
-    <button class="primary-btn" onTap="handleDownload">
-      <image class="btn-icon" src="/image/download.png" />
-      下载回执
-    </button>
-    
-    <button 
-      a:if="{{status === '不合格'}}"
-      class="secondary-btn" 
-      onTap="handleRetake">
-      <image class="btn-icon" src="/image/camera.png" />
-      重新拍摄
-    </button>
   </view>
 </view>

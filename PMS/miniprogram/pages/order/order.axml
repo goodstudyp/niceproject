@@ -4,12 +4,8 @@
   </view>
 
   <view class="order-list">
-    <view data-index="{{index}}" 
-          class="order-item" 
-          a:for="{{userFile}}" 
-          a:key="index" 
-          onTap="jump">
-      <view class="order-content">
+    <view class="order-item" a:for="{{userFile}}" a:key="index">
+      <view class="order-content" data-index="{{index}}" onTap="jump">
         <view class="order-info">
           <view class="order-type">
             <text class="type-label">{{item.type}}</text>
@@ -38,6 +34,11 @@
           <image class="preview-image" src="{{item.fileContent}}" mode="aspectFill"/>
           <image class="arrow-icon" src="/image/direction.png" />
         </view>
+      </view>
+      
+      <!-- 添加删除按钮 -->
+      <view class="delete-btn" catchTap="handleDelete" data-index="{{index}}">
+        <image class="delete-icon" src="/image/delete.png" />
       </view>
     </view>
   </view>

@@ -1,10 +1,36 @@
-<view class="canvas-container">
-  <canvas class="canvas" id="canvas" type="2d" onReady="onCanvasReady" ></canvas>
-</view>
+<view class="container">
+  <view class="header">
+    <text class="title">照片预览</text>
+    
+  </view>
 
+  <view class="preview-section">
+    <view class="photo-container">
+      <text class="photo-label">预览效果</text>
+      <canvas id="canvas" type="2d" onReady="onCanvasReady" class="photo-canvas"></canvas>
+      <view class="watermark-hint">
+        <image class="hint-icon" src="/image/info.png" />
+        <text>预览中的水印不会出现在最终照片中</text>
+      </view>
+    </view>
+  </view>
 
+  <view class="info-section">
+    <view class="info-item">
+      <image class="info-icon" src="/image/type.png" />
+      <text class="info-label">照片类型</text>
+      <text class="info-value">{{type || '一寸照片'}}</text>
+    </view>
+  </view>
 
-<view class="page-section-demo">
-  <button onTap="back" type="primary">重新拍</button>
-  <button onTap="next" type="primary">下一步</button>
+  <view class="button-group">
+    <button class="secondary-btn" onTap="back">
+      <image class="btn-icon" src="/image/take_photo.png" />
+      重新拍摄
+    </button>
+    <button class="primary-btn" onTap="next">
+      <image class="btn-icon" src="/image/sure.png" />
+      确认使用
+    </button>
+  </view>
 </view>
